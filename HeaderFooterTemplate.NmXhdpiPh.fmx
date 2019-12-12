@@ -1,0 +1,78 @@
+inherited HeaderFooterForm_NmXhdpiPh: THeaderFooterForm_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  inherited Header: TToolBar
+    Size.Width = 400.000000000000000000
+    inherited HeaderLabel: TLabel
+      Size.Width = 400.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+  inherited Footer: TToolBar
+    Position.Y = 567.000000000000000000
+    Size.Width = 400.000000000000000000
+    TintColor = claAzure
+    inherited connectBtn: TButton
+      Size.Width = 182.000000000000000000
+    end
+    inherited disconnectBtn: TButton
+      Position.X = 218.000000000000000000
+      Size.Width = 182.000000000000000000
+    end
+  end
+  inherited Circle1: TCircle
+    Position.X = 300.000000000000000000
+    Position.Y = 71.000000000000000000
+  end
+  inherited led: TCircle
+    Position.X = 305.000000000000000000
+    Stroke.Kind = None
+  end
+  inherited Label1: TLabel
+    Locked = True
+    Position.X = 272.000000000000000000
+  end
+  inherited EditIPaddress: TEdit
+    Position.X = 96.000000000000000000
+    Position.Y = 72.000000000000000000
+    Size.Width = 153.000000000000000000
+    OnChange = EditIPaddressChange
+  end
+  inherited MemoLog: TMemo
+    TextSettings.FontColor = claLawngreen
+    TextSettings.WordWrap = True
+    Position.Y = 232.000000000000000000
+    Size.Width = 401.000000000000000000
+    Size.Height = 337.000000000000000000
+    Viewport.Width = 401.000000000000000000
+    Viewport.Height = 337.000000000000000000
+  end
+  inherited Label2: TLabel
+    Position.Y = 160.000000000000000000
+  end
+  inherited EditMsg: TEdit
+    Position.Y = 184.000000000000000000
+    Enabled = False
+    Size.Width = 281.000000000000000000
+  end
+  inherited SendBtn: TSpeedButton
+    Enabled = False
+    Position.X = 288.000000000000000000
+    Position.Y = 176.000000000000000000
+  end
+  inherited EditPort: TEdit
+    Position.X = 88.000000000000000000
+    OnChange = EditPortChange
+  end
+  inherited IdTCPClient1: TIdTCPClient
+    ConnectTimeout = 1000
+    Left = 288
+    Top = 16
+  end
+  inherited ImageList1: TImageList
+    Left = 352
+    Top = 16
+  end
+end

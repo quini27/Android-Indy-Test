@@ -1,0 +1,61 @@
+inherited Form3_iPhone4in: TForm3_iPhone4in
+  ClientHeight = 548
+  ClientWidth = 320
+  DesignerMasterStyle = 3
+  inherited ToolBar1: TToolBar
+    Size.Width = 320.000000000000000000
+    Size.Height = 44.000000000000000000
+    inherited Label1: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      TextSettings.Font.Size = 14.000000000000000000
+    end
+  end
+  inherited ConnectBtn: TButton
+    StaysPressed = True
+    StyledSettings = [Family, Size, Style]
+    Position.Y = 504.000000000000000000
+    Size.Width = 161.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Connect'
+    TextSettings.FontColor = claBlue
+    TextSettings.FontColorForState.Pressed = claPaleturquoise
+  end
+  inherited DisconnectBtn: TButton
+    Enabled = False
+    StyledSettings = [Family, Size, Style]
+    Position.X = 160.000000000000000000
+    Size.Width = 161.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Disconnect'
+    TextSettings.FontColor = claBlue
+    TextSettings.FontColorForState.Pressed = claPaleturquoise
+  end
+  inherited SpeedButton1: TSpeedButton
+    Position.X = 280.000000000000000000
+    Size.Width = 44.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'arrowdowntoolbutton'
+  end
+  inherited MemoLog: TMemo
+    ReadOnly = True
+    ShowScrollBars = False
+    Position.Y = 256.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 249.000000000000000000
+    Size.PlatformDefault = False
+    Viewport.Width = 320.000000000000000000
+    Viewport.Height = 249.000000000000000000
+  end
+  inherited IPEdit: TEdit
+    Position.X = 88.000000000000000000
+    Size.Width = 145.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+  end
+  inherited CircleOut: TCircle
+    Size.Width = 33.000000000000000000
+    Size.Height = 33.000000000000000000
+  end
+end

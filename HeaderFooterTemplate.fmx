@@ -1,0 +1,278 @@
+object HeaderFooterForm: THeaderFooterForm
+  Left = 0
+  Top = 0
+  Caption = 'Header Footer Form'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  DesignerMasterStyle = 3
+  object Header: TToolBar
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object HeaderLabel: TLabel
+      Align = Contents
+      StyledSettings = [Family]
+      Size.Width = 384.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.Font.Size = 16.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claOrangered
+      TextSettings.HorzAlign = Center
+      Text = 'Android Indy Test'
+    end
+  end
+  object Footer: TToolBar
+    Align = Bottom
+    Position.Y = 519.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'bottomtoolbar'
+    TabOrder = 1
+    object connectBtn: TButton
+      StaysPressed = True
+      Align = FitLeft
+      StyledSettings = [Family, Style, FontColor]
+      IsPressed = True
+      Locked = True
+      Size.Width = 192.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Connect'
+      TextSettings.Font.Size = 16.000000000000000000
+      OnClick = connectBtnClick
+    end
+    object disconnectBtn: TButton
+      StaysPressed = True
+      Align = FitRight
+      Enabled = False
+      StyledSettings = [Family, Style, FontColor]
+      IsPressed = True
+      Locked = True
+      Position.X = 192.000000000000000000
+      Size.Width = 192.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Disconnect'
+      TextSettings.Font.Size = 16.000000000000000000
+      OnClick = disconnectBtnClick
+    end
+  end
+  object Circle1: TCircle
+    Fill.Color = claDarkgray
+    Locked = True
+    Position.X = 320.000000000000000000
+    Position.Y = 72.000000000000000000
+    Size.Width = 42.000000000000000000
+    Size.Height = 42.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = claDarkgray
+    Stroke.Thickness = 0.000000000000000000
+  end
+  object led: TCircle
+    Fill.Color = claMaroon
+    Locked = True
+    Position.X = 325.000000000000000000
+    Position.Y = 76.000000000000000000
+    Size.Width = 32.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label1: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 288.000000000000000000
+    Position.Y = 120.000000000000000000
+    Size.Width = 98.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 10.000000000000000000
+    Text = 'Connection Status'
+    TabOrder = 4
+  end
+  object IPLabel: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 16.000000000000000000
+    Position.Y = 80.000000000000000000
+    Size.Width = 73.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'IP Address'
+    TabOrder = 6
+  end
+  object EditIPaddress: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    StyleLookup = 'editstyle'
+    TabOrder = 7
+    Position.X = 88.000000000000000000
+    Position.Y = 80.000000000000000000
+    Size.Width = 185.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    StyledSettings = [Family, Size, Style]
+  end
+  object MemoLog: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Lines.Strings = (
+      'Memo Log')
+    ReadOnly = True
+    StyledSettings = [Size, Style]
+    TextSettings.Font.Family = 'Arial'
+    TextSettings.FontColor = claLime
+    OnChange = MemoLogChange
+    Bounces = False
+    Position.Y = 296.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 225.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    Viewport.Width = 376.000000000000000000
+    Viewport.Height = 217.000000000000000000
+  end
+  object Label2: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 8.000000000000000000
+    Position.Y = 176.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 14.000000000000000000
+    Text = 'Message to send'
+    TabOrder = 9
+  end
+  object EditMsg: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 10
+    Position.X = 8.000000000000000000
+    Position.Y = 208.000000000000000000
+    Size.Width = 297.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object SendBtn: TSpeedButton
+    Images = ImageList1
+    ImageIndex = 0
+    Position.X = 304.000000000000000000
+    Position.Y = 200.000000000000000000
+    Text = 'Send'
+    OnClick = SendBtnClick
+  end
+  object PortLabel: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 16.000000000000000000
+    Position.Y = 120.000000000000000000
+    Size.Width = 57.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Port'
+    TabOrder = 13
+  end
+  object EditPort: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 15
+    Position.X = 56.000000000000000000
+    Position.Y = 112.000000000000000000
+  end
+  object IdTCPClient1: TIdTCPClient
+    OnDisconnected = IdTCPClient1Disconnected
+    OnConnected = IdTCPClient1Connected
+    ConnectTimeout = 0
+    Host = '192.168.0.200'
+    IPVersion = Id_IPv4
+    Port = 100
+    ReadTimeout = -1
+    Left = 264
+    Top = 56
+  end
+  object ImageList1: TImageList
+    Source = <
+      item
+        MultiResBitmap.Height = 284
+        MultiResBitmap.Width = 502
+        MultiResBitmap = <
+          item
+            Width = 502
+            Height = 284
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000001F60000011C0806000000353496
+              58000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              06E049444154785EEDD70B6EC3361444D1A8FBDFB39B8F0B24A91DCB16493D0E
+              CF01047101A22E66BBBC7B030022FC737D030001841D0082083B000411760008
+              22EC001044D8012088B003401061078020C20E0041841D0082083B0004117600
+              0822EC001044D8012088B003401061078020C20E0041841D0082083B00041176
+              000822EC001044D8012088B003401061078020C20E0041841D0082083B000411
+              76000822EC001044D8012088B003401061078020C20E0041841D0082083B0004
+              1176000822EC001044D8012088B003401061078020C20E0041841D0082083B00
+              041176000822EC001044D8012088B003401061079ADBB6EDF301C61376A01B81
+              87F1841DE84EE0611C6107861177E84FD881A1AC77E84BD88153083CF421ECC0
+              A9041EDA1276A0B9CBE5723DED27EED086B003CDBD1A69EB1D8E1376A0A91661
+              1678789DB00365093C3C4FD881F2C41DF61376600AD63BEC23ECC054041EFE26
+              ECC094041E6E1376606A020F3F093B1041DCE18BB00331AC7710762090C0B332
+              610762093C2B1276209EB8B31261079660BDB30A61079622F0A413766049024F
+              2A61079626EEA411766079D63B49841DE04AE04920EC00BF083C331376803B04
+              9E19093BC003E2CE4C841D6007EB9D59083BC013049EEA841DE005024F55C20E
+              7080B8538DB0031C64BD5389B0033422F05420EC008D093C671276804EC49D33
+              083B4047D63BA3093BC00002CF28C20E3090C0D39BB0039C40E0E965BBBCBB9E
+              F9830B08F4E2374C4B163BC0C9AC775A12768022049E16841DA01881E7086107
+              284ADC7985B0031466BDF32C61079880C0B397B0034C44E07944D8012624EEDC
+              23EC0093B2DEB945D8012627F07C27EC0021049E0FC20E1046E0D726EC00A1C4
+              7D4DC20E10CC7A5F8FB0032C40E0D721EC000B11F87CC20EB02071CF25EC008B
+              B2DE33093BC0E2043E8BB003F049E033083B003F88FBDC841D80FFB1DEE725EC
+              00DC25F0F31176001E12F879083B00BB097C7DC20EC0D3C4BD2E6107E025D67B
+              4DC20EC021025F8BB003D084C0D720EC003425EEE71276009AB3DECF23EC0074
+              23F0E3093B00DD09FC38C20EC030E2DE9FB0033094F5DE97B003700A81EF43D8
+              013895C0B725EC009420F06D083B00A588FB31C20E4039D6FBEB841D80B204FE
+              79C20E407902BF9FB003300D717F4CD801988AF5FE376107604A027F9BB00330
+              3581FF49D8018820EE5F841D8018D6BBB0031068E5C00B3B00B1568CBBB00340
+              1061078020C20E40ACCBE5723DAD43D80188F311F415A3FE41D80188B26AD0FF
+              23EC00445879A57F27EC004C4DD07F127600A624E8B7093B005311F4BF093B00
+              D310F4C7841D80F2ACF4FD841D80B204FD79C20E403982FE3A6107A014413F46
+              D80128C14A6F43D8013895A0B725EC009C42D0FB1076008613F47E841D8061AC
+              F4FE841D80EE047D1C6107A01B411F4FD801684ED0CF23EC003425E8E7127600
+              9AB0D26B1076000E11F45A841D8097087A4DC20EC0D304BD2E610760372BBD3E
+              6107E021419F87B0037097A0CF47D801B849D0E724EC00FC60A5CF4DD801F824
+              E819841D6071829E45D8011625E899841D6041829E4BD8011662A5E713768005
+              08FA3A841D2098A0AF47D8014209FA9A841D208C95BE3661070821E87C107680
+              C9093ADF093BC0C4049DDF841D6042563AF7083BC044049D47841D600282CE5E
+              C20E5098A0F32C6107284AD07985B0031463A57384B0031421E8B420EC002713
+              745A12768013093AAD093BC009AC747AD9DE3F2C5F16D0CCB66DD713B7F8E5D2
+              9BC50E308085CE28C20ED099A03392B0037462A573066107684CD03993B00334
+              22E85420EC0007093A95083BC001824E35C20EF0022B9DAA841DE009824E75C2
+              0EB083A0330B61077840D09989B003DC61A533236107F845D09999B0035C093A
+              09841DE09DA09342D881A559E9A411766049824E2A61079622E8A41376600982
+              CE2A841D8827E8AC44D88158563A2B1276208EA0B332610762083A083B1042D0
+              E18BB00353B3D2E12761079AD9B6ED7AEA4FD0E1366107A622E8F0376107A621
+              E8F098B003E559E9B09FB00365093A3C4FD88172041D5E27EC4019820EC7093B
+              5082A0431BC20E9CCA4A87B6841D3885A0431FC20E0C25E8D097B003C3083AF4
+              27EC4077563A8C23EC4033BFE32DE830DEF67EE9DC3A000861B1034010610780
+              20C20E0041841D0082083B00041176000822EC001044D8012088B00340106107
+              8020C20E0041841D0082083B00041176000822EC001044D8012088B003401061
+              078020C20E0041841D0082083B00041176000822EC001044D8012088B0034010
+              61078020C20E0041841D0082083B00041176000822EC001044D8012088B00340
+              1061078020C20E0041841D0082083B00041176000822EC001044D8012088B003
+              401061078020C20E0041841D0082083B00041176000822EC001044D80120C6DB
+              DBBF9336FE408867090D0000000049454E44AE426082}
+            FileName = 
+              'C:\fernando\projdelphi\provas rad studio\web test\Indy projects\' +
+              'Android Indy test\seta.bmp'
+          end>
+        Name = 'seta'
+      end>
+    Destination = <
+      item
+        Layers = <>
+      end>
+    Left = 312
+    Top = 248
+  end
+end

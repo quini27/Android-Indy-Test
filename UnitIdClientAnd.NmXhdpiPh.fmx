@@ -1,0 +1,34 @@
+inherited Form3_NmXhdpiPh: TForm3_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  DesignerMasterStyle = 3
+  inherited ToolBar1: TToolBar
+    Size.Width = 400.000000000000000000
+    inherited Label1: TLabel
+      Position.X = 16.000000000000000000
+    end
+  end
+  inherited SpeedButton1: TSpeedButton
+    Position.Y = 8.000000000000000000
+  end
+  inherited MemoLog: TMemo
+    Viewport.Width = 50.000000000000000000
+    Viewport.Height = 50.000000000000000000
+  end
+  inherited IPEdit: TEdit
+    Position.X = 112.000000000000000000
+    Position.Y = 16.000000000000000000
+  end
+  inherited CircleOut: TCircle
+    Position.X = 345.000000000000000000
+    Position.Y = 66.000000000000000000
+    Size.Width = 38.000000000000000000
+    Size.Height = 38.000000000000000000
+  end
+  inherited Circle1: TCircle
+    Position.X = 350.000000000000000000
+    Position.Y = 67.000000000000000000
+    Size.Width = 28.000000000000000000
+    Size.Height = 36.000000000000000000
+  end
+end

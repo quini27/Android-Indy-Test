@@ -1,0 +1,90 @@
+object Form3: TForm3
+  Left = 0
+  Top = 0
+  Caption = 'Form3'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object ToolBar1: TToolBar
+    Size.Width = 640.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Label1: TLabel
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 176.000000000000000000
+      Position.Y = 16.000000000000000000
+      TextSettings.Font.Size = 10.000000000000000000
+      Text = 'IP address:'
+      TabOrder = 0
+    end
+  end
+  object ConnectBtn: TButton
+    Position.X = 88.000000000000000000
+    Position.Y = 520.000000000000000000
+    TabOrder = 2
+    Text = 'ConnectBtn'
+  end
+  object DisconnectBtn: TButton
+    Position.X = 232.000000000000000000
+    Position.Y = 504.000000000000000000
+    TabOrder = 3
+    Text = 'DisconnectBtn'
+  end
+  object SpeedButton1: TSpeedButton
+    Position.X = 256.000000000000000000
+    Position.Y = 16.000000000000000000
+    Text = 'SpeedButton1'
+  end
+  object MemoLog: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    Caret.Color = claBlack
+    DataDetectorTypes = []
+    Lines.Strings = (
+      'Memo Log')
+    StyledSettings = [Family, Size, Style]
+    TextSettings.FontColor = claLime
+    Position.X = 128.000000000000000000
+    Position.Y = 336.000000000000000000
+    TabOrder = 5
+    Viewport.Width = 42.000000000000000000
+    Viewport.Height = 37.000000000000000000
+  end
+  object IPEdit: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 6
+    Position.X = 144.000000000000000000
+    Position.Y = 8.000000000000000000
+  end
+  object CircleOut: TCircle
+    Locked = True
+    Position.X = 264.000000000000000000
+    Position.Y = 64.000000000000000000
+    Size.Width = 50.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Circle1: TCircle
+    Fill.Color = claMaroon
+    Locked = True
+    Position.X = 269.000000000000000000
+    Position.Y = 69.000000000000000000
+    Size.Width = 41.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = claNull
+    Stroke.Thickness = 0.000000000000000000
+  end
+  object IdTCPClient1: TIdTCPClient
+    ConnectTimeout = 0
+    Host = '192.168.0.200'
+    IPVersion = Id_IPv4
+    Port = 100
+    ReadTimeout = -1
+    Left = 536
+    Top = 48
+  end
+end
