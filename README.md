@@ -39,3 +39,4 @@ Command to close the connection, which also happens when the disconnect button i
 Other commands can be easily added in the sketch test_indy.ino in order to control other devices (sensors and actuators) connected to the IoT board.
 
  
+![telaandroid](https://user-images.githubusercontent.com/37451727/133894133-708b7d30-4dc1-4206-adc8-63af7c560e17.jpg)
